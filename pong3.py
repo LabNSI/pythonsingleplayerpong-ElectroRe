@@ -32,18 +32,18 @@ while not end:
         if event.type == pygame.QUIT:
             end = True
 
-    key = pygame.key.___
+    key = pygame.key.get_pressed()
 
-    if ___:
+    if K_a:
         # up left corner
 
-    if ___:
+    if K_z:
         # up right corner
 
-    if ___:
+    if K_q:
         # down left corner
 
-    if ___:
+    if K_s:
         # down left corner
 
     # redraw circle at new position
