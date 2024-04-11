@@ -27,27 +27,31 @@ pygame.draw.circle(screen, WHITE, (x, y), radius)  # Position is the center of t
 end = False
 while not end:
     # fill screen with color only
-    screen.____
+    screen.fill(RED)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             end = True
 
     key = pygame.key.get_pressed()
 
-    if K_a:
-        # up left corner
+    if key[pygame.K_a]:
+        x = radius
+        y = radius
 
-    if K_z:
-        # up right corner
+    if key[pygame.K_z]:
+        x = WIDTH+radius
+        y = radius
 
-    if K_q:
-        # down left corner
+    if key[pygame.K_q]:
+        x = radius
+        y = HEIGHT+radius
 
-    if K_s:
-        # down left corner
+    if key[pygame.K_s]:
+        x = WIDTH+radius
+        y = HEIGHT+radius
 
     # redraw circle at new position
-    ___
+    pygame.draw.circle(screen, WHITE, (x, y), radius)  # Position is the center of the circle.
     # update the display
     pygame.display.update()
 
